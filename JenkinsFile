@@ -1,7 +1,7 @@
-node('master') {
+node('main') {
     stage("Fetch Source Code") {
     	cleanWs()
-        git([url: https://github.com/carlton-noronha/Beginning-Jenkins.git, branch: functions-and-tests])
+        git([url: https://github.com/carlton-noronha/lesson5.git, branch: functions-and-tests])
     }
     
     dir('Lesson5') {
@@ -12,7 +12,7 @@ node('master') {
             sh 'python3 test_functions.py'
         }
         stage("Deployment") {
-            if (env.BRANCH_NAME == 'master') {
+            if (env.BRANCH_NAME == 'main') {
                 printMessage('Deploying the master branch')
             } else {
                 printMessage("No deployment for branch [${env.BRANCH_NAME}]")
