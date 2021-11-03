@@ -4,7 +4,7 @@ node('main') {
         git([url: https://github.com/carlton-noronha/lesson5.git, branch: functions-and-tests])
     }
     
-    dir('Lesson5') {
+    dir('.') {
         printMessage('Running Pipeline')
         stage("Testing") {
 	    sh 'ls -la'
