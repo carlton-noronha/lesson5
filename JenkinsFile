@@ -1,7 +1,7 @@
 node('main') {
     stage("Fetch Source Code") {
     	cleanWs()
-        git([url: 'https://github.com/carlton-noronha/lesson5.git', branch: 'functions-and-tests'])
+        git([url: 'https://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@github.com/carlton-noronha/lesson5.git', branch: 'functions-and-tests'])
     }
     
     dir('.') {
