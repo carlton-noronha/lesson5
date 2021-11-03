@@ -1,4 +1,4 @@
-node('main') {
+node('master') {
     stage("Fetch Source Code") {
     	cleanWs()
         git([url: 'https://github.com/carlton-noronha/lesson5.git', branch: 'functions-and-tests'])
